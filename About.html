@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="Stile_2.css">
+
+<script>
+$(function() {
+
+	$("#mccn").on("input", function () {
+		var varSettings = "'mccn' " + $("#mccn").val();
+	 $("#letteraS").css("font-variation-settings", varSettings);
+		console.log (varSettings)
+	})
+	
+	$("#mccn").trigger("input");
+
+});
+
+$(function() {
+
+	$("#psts").on("input", function () {
+		var varSettings = "'psts' " + $("#psts").val();
+	 $("#letteraS").css("font-variation-settings", varSettings);
+		console.log (varSettings)
+	})
+	
+	$("#psts").trigger("input");
+
+});
+
+$(function() {
+
+	$("#frfl").on("input", function () {
+		var varSettings = "'frfl' " + $("#frfl").val();
+	 $("#letteraS").css("font-variation-settings", varSettings);
+		console.log (varSettings)
+	})
+	
+	$("#frfl").trigger("input");
+
+});
+
+
+</script>
+
+<style>
+@font-face {
+  font-family: 'RumoreDiTuono';
+  src:url("NewFontGX.ttf") format("truetype-variations");
+}
+
+
+.butterfly{
+	font-family: RumoreDiTuono;
+	font-size: 5vw;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+
+html {
+	font-size: 10px;
+	font-family: -apple-system, ".SFNSText", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;;
+	 text-transform: uppercase;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div id="testoRacconto">
+	
+	<div id="testoMacchina">Il tempo non permette<br>questo tipo di pasticcio<br>... Quando minaccia di<br> verificarsi una cosa<br>del genere, il tempo si<br>tira da parte.</div>
+	
+	<div id="testoPista">Questa è la pista, fluttua <br>a quindici centimetri dal <br>terreno. Non sfiora <br>nemmeno un filo d'erba,<br> un fiore, o un albero. è<br>di metallo antigravità.</div>
+	
+	<div id="testoFarfalla">La farfalla cadde<br>sul pavimento, una cosa squisita, una piccola cosa che poteva sconvolgere gli equilibri per sempre.</div>
+	
+	</div>
+	
+	<div id="letteraS">S</div>
+	
+	<div id="sliderCase">
+	<input type="range" id="mccn" class="axis_slider" min="-100" max="100" val="0"><br/>
+	<input type="range" id="psts" class="axis_slider" min="-100" max="100"  val="0"><br/>
+	<input type="range" id="frfl" class="axis_slider" min="-100" max="100" val="0"><br/>
+	</div>
+
+	<div id="macchina">MACCHINA</div>
+	<div id="pista" >PISTA</div>
+	<div id="farfalla">FARFALLA</div>
+
+
+	<script>
+$(document).ready(function(){
+	var variabileC = "'mccn' " + "0," + "'frfl' " + "0";
+    $("#pista").click(function(){
+    	$("#letteraS").css("font-variation-settings", variabileC);
+    	$("#testoPista").css("display", "block");
+    	$("#testoMacchina").css("display", "none");
+    	$("#testoFarfalla").css("display", "none");
+    	$("#pista").css("textDecoration", "underline");
+    	$("#macchina").css("textDecoration", "none");
+    	$("#farfalla").css("textDecoration", "none");
+    	$("#psts").css("display", "block");
+        $("#mccn").css("display", "none");
+        $("#frfl").css("display", "none");
+    });
+});
+
+$(document).ready(function(){
+	var variabileA = "'mccn' " + "0," + "'psts' " + "0";
+    $("#farfalla").click(function(){
+    	$("#letteraS").css("font-variation-settings", variabileA);
+    	$("#testoFarfalla").css("display", "block");
+    	$("#testoMacchina").css("display", "none");
+    	$("#testoPista").css("display", "none");
+    	$("#farfalla").css("textDecoration", "underline");
+    	$("#macchina").css("textDecoration", "none");
+    	$("#pista").css("textDecoration", "none");
+    	$("#frfl").css("display", "block");
+        $("#mccn").css("display", "none");
+        $("#psts").css("display", "none");
+    });
+});
+
+$(document).ready(function(){
+	var variabileB = "'frfl' " + "0," + "'psts' " + "0";
+    $("#macchina").click(function(){
+    	$("#letteraS").css("font-variation-settings", variabileB);
+    	$("#testoMacchina").css("display", "block");
+    	$("#testoPista").css("display", "none");
+    	$("#testoFarfalla").css("display", "none");
+    	$("#macchina").css("textDecoration", "underline");
+    	$("#pista").css("textDecoration", "none");
+    	$("#farfalla").css("textDecoration", "none");
+    	$("#mccn").css("display", "block");
+        $("#psts").css("display", "none");
+        $("#frfl").css("display", "none");
+    });
+});
+
+</script>
+
+<script>
+document.getElementById('macchina').onclick = function(){
+   document.getElementById('mccn').value = 0;
+   document.getElementById('psts').value = 0;
+   document.getElementById('frfl').value = 0;
+};
+
+document.getElementById('pista').onclick = function(){
+   document.getElementById('mccn').value = 0;
+   document.getElementById('psts').value = 0;
+   document.getElementById('frfl').value = 0;
+};
+
+document.getElementById('farfalla').onclick = function(){
+   document.getElementById('mccn').value = 0;
+   document.getElementById('psts').value = 0;
+   document.getElementById('frfl').value = 0;
+};
+
+</script>
+
+</body>
+</html>

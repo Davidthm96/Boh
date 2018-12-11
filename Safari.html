@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="Stile.css">
+<script>
+$(function() {
+
+	$(".axis_slider").on("input", function () {
+		var varSettings = "'mccn' " + $("#mccn").val() + ",'psts' " + $("#psts").val() + ",'frfl' " + $("#frfl").val(); 
+	 $(".butterfly").css("font-variation-settings", varSettings);
+		console.log (varSettings)
+	})
+	
+	$(".axis_slider").trigger("input");
+
+});
+
+</script>
+
+
+<style>
+@font-face {
+  font-family: 'RumoreDiTuono';
+  src:url("NewFontGX.ttf") format("truetype-variations");
+}
+
+
+.butterfly{
+	font-family: RumoreDiTuono;
+	font-size: 5vw;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+
+html {
+	font-size: 10px;
+	font-family: -apple-system, ".SFNSText", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;;
+	 text-transform: uppercase;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div id="testo">
+	<textarea cols="20" rows="6" class="butterfly" id="farfalla"placeholder="scrivi qui"></textarea>
+	</div>
+	
+	<div class="linea"></div>
+
+	<div id="sliderCase">
+	Macchina<br/>
+	<input type="range" id="mccn" class="axis_slider" min="-100" max="100" val="0"><br/>
+	Pista<br/>
+	<input type="range" id="psts" class="axis_slider" min="-100" max="100"  val="0"><br/>
+	Farfalla<br/>
+	<input type="range" id="frfl" class="axis_slider" min="-100" max="100" val="0"><br/>
+	</div>
+   
+	
+	<div id="reset">RESET</div>
+	<a href="index.html" style="color: black; text-decoration:none;"><div id="home">HOME</a>
+
+	<script>
+   document.getElementById('reset').onclick = function(){
+   document.getElementById('mccn').value = 0;
+   document.getElementById('psts').value = 0;
+   document.getElementById('frfl').value = 0;
+   document.getElementById("farfalla").style.fontVariationSettings = "'mccn'"+"0";
+   document.getElementById("farfalla").style.fontVariationSettings = "'psts'"+"0";
+   document.getElementById("farfalla").style.fontVariationSettings = "'frfl'"+"0";
+};
+	</script>
+	
+
+</body>
+</html>

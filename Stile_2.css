@@ -1,0 +1,176 @@
+body{
+	position:fixed;
+	background-color: #cadfb3;
+	font-family: RumoreDiTuono;
+}
+
+.axis_slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 0.75vw;
+    border-radius: 5px;
+    background: black;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-color: black;
+    border-width: 2px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.axis_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+    border: 2px solid black;
+}
+
+.axis_slider::-moz-range-thumb {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+    border: 2px solid black;
+    margin-bottom: 2%;
+}
+
+
+#reset{
+    font-family: RumoreDiTuono;
+    background-color: #cadfb3;
+}
+
+#home{
+    font-family: RumoreDiTuono;
+    background-color: #cadfb3;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .linea{
+        width: 108%;
+        margin-left:-4%;
+        margin-top:5%;
+        margin-bottom:5%;
+        height: 0.7%;
+        position: fixed;
+        top: 49%;
+        background-color: black;
+    }
+    
+   .axis_slider {
+    width: 100%;
+}
+
+    #sliderCase{
+        /*background-color: red;*/
+        position: fixed;
+        bottom: 15%;
+        left: 15%;
+	    margin-right:5%;
+	    margin-top: 10%;
+	    width: 70%;
+    }
+    
+    #macchina{
+        position: fixed;
+	    left:10%;
+	    bottom: 5%;
+	    color:black;
+	    cursor: pointer;
+	    text-decoration: underline;
+    }
+    
+     #farfalla{
+        position: fixed;
+	    right:10%;
+	    bottom: 5%;
+	    color:black;
+	    cursor: pointer;
+    }
+    
+    #home{
+        position: fixed;
+	    left:5%;
+	    bottom: 5%;
+	    color:black;
+    }
+    
+    #pista{
+        position: fixed;
+	    left:45%;
+	    bottom: 5%;
+	    color:black;
+    }
+    
+    #safariPart{
+        font-size: 12vw;
+        position: fixed;
+        left: 30%;
+        top: 22.5%;
+        text-align:center;
+    }
+    
+    #aboutPart{
+        font-size: 12vw;
+        position: fixed;
+        left: 30%;
+        bottom: 22.5%;
+        text-align:center;
+    }
+    
+    #testoRacconto{
+        /*background-color:red;*/
+        position: fixed;
+        font-size: 6.5vw;
+        text-align: center;
+        width: 90%;
+        left: 5%;
+        top: 2.5%;
+    }
+    
+    #testoPista{
+        display: none;
+        font-size: 6.5vw;
+    }
+    
+    #testoFarfalla{
+        display: none;
+    }
+    
+    #letteraS{
+        position: fixed;
+        font-size: 50vw;
+        left: 35%;
+        top: 32.5%;
+    }
+    
+    #mccn{
+        position: absolute;
+        display:block;
+        bottom: 15%;
+    }
+    
+    #psts{
+        position: absolute;
+        display:none;
+        bottom: 15%;
+    }
+    
+    #frfl{
+        position: absolute;
+        display:none;
+        bottom: 15%;
+    }
+
+}

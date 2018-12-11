@@ -1,0 +1,145 @@
+body{
+	position:fixed;
+	background-color: #cadfb3;
+	font-family: RumoreDiTuono;
+}
+
+.axis_slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 0.75vw;
+    border-radius: 5px;
+    background: black;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-color: black;
+    border-width: 2px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.axis_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+    border: 2px solid black;
+}
+
+.axis_slider::-moz-range-thumb {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+    border: 2px solid black;
+    margin-bottom: 2%;
+}
+
+#farfalla{
+	border: 0px;
+	font-size: 5vw;
+	width: 100%;
+	background-color: #cadfb3;
+}
+
+#reset{
+    font-family: RumoreDiTuono;
+    background-color: #cadfb3;
+}
+
+#home{
+    font-family: RumoreDiTuono;
+    background-color: #cadfb3;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #farfalla{
+	border: 0px;
+	font-size: 12vw;
+	margin-left: 5%;
+	margin-right:5%;
+	margin-top: 5%;
+	width: 90%;
+	height: 45%;
+}
+    
+    .linea{
+        width: 108%;
+        margin-left:-4%;
+        margin-top:5%;
+        margin-bottom:5%;
+        height: 0.7%;
+        position: fixed;
+        top: 49%;
+        background-color: black;
+    }
+    
+   .axis_slider {
+    width: 100%;
+    margin-bottom: 9%;
+}
+
+    #sliderCase{
+      /* background-color: red;*/
+        position: fixed;
+        bottom: 12.5%;
+        left: 5%;
+	    margin-right:5%;
+	    margin-top: 10%;
+	    width: 90%;
+	    height: 30%;
+    }
+    
+    #compra{
+        position: fixed;
+        margin-left: 5%;
+	    right:5%;
+	    margin-top: 5%;
+	    top: 0;
+	    color:black;
+	    cursor: pointer;
+    }
+    
+    #reset{
+        position: fixed;
+	    right:5%;
+	    margin-bottom: 5%;
+	    bottom: 0;
+	    color:black;
+    }
+    
+    #home{
+        position: fixed;
+	    left:5%;
+	    margin-bottom: 5%;
+	    bottom: 0;
+	    color:black;
+    }
+    
+    #safariPart{
+        font-size: 12vw;
+        position: fixed;
+        left: 30%;
+        top: 22.5%;
+        text-align:center;
+    }
+    
+    #aboutPart{
+        font-size: 12vw;
+        position: fixed;
+        left: 30%;
+        bottom: 22.5%;
+        text-align:center;
+    }
+
+}

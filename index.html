@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="Stile.css">
+
+<style>
+@font-face {
+  font-family: 'RumoreDiTuono';
+  src:url("NewFontGX.ttf") format("truetype-variations");
+}
+
+
+.butterfly{
+	font-family: RumoreDiTuono;
+	font-size: 5vw;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+
+html {
+	font-size: 10px;
+	font-family: -apple-system, ".SFNSText", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;;
+	 text-transform: uppercase;
+}
+</style>
+</head>
+
+<body>
+
+	<div id="safariPart">
+	<a href="safari.html" style="text-decoration:none; color: black;">Safari</a>
+	</div>
+	
+	<div class="linea"></div>
+	
+	<div id="aboutPart">
+	<a href="about.html" style="text-decoration:none; color: black;">About</a>
+	</div>
+
+	<a href="mailto:gruppoaleph@gmail.com?subject=Safari Typeface request"><div id="compra">COMPRA</div></a>
+
+	<script>
+   document.getElementById('reset').onclick = function(){
+   document.getElementById('mccn').value = 0;
+   document.getElementById('psts').value = 0;
+   document.getElementById('frfl').value = 0;
+   document.getElementById("farfalla").style.fontVariationSettings = "'mccn'"+"0";
+   document.getElementById("farfalla").style.fontVariationSettings = "'psts'"+"0";
+   document.getElementById("farfalla").style.fontVariationSettings = "'frfl'"+"0";
+};
+	</script>
+	
+
+</body>
+</html>
